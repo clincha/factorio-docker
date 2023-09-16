@@ -50,7 +50,7 @@ def main(push_tags=False):
             continue
         for tag in tags:
             try:
-                subprocess.run(["docker", "push", f"factoriotools/factorio:{tag}"],
+                subprocess.run(["docker", "push", f"clincha/factorio:{tag}"],
                                check=True)
             except subprocess.CalledProcessError:
                 print("Docker push failed")
