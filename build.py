@@ -14,7 +14,7 @@ def build_dockerfile(sha256, version, tags):
     build_command = ["docker", "build", "--build-arg", f"VERSION={version}",
                      "--build-arg", f"SHA256={sha256}", "."]
     for tag in tags:
-        build_command.extend(["-t", f"factoriotools/factorio:{tag}"])
+        build_command.extend(["-t", f"clincha/factorio:{tag}"])
     try:
         subprocess.run(build_command, cwd=build_dir, check=True)
     except subprocess.CalledProcessError:
